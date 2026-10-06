@@ -6,7 +6,7 @@ Version 0.2.0 is the initial public software release. The project owner will per
 
 ## Author and credits
 
-The sole software author and copyright holder is **junjiezhang**. AI use and author responsibility are documented in [AI_USE_DISCLOSURE.md](AI_USE_DISCLOSURE.md). AI tools are not authors. No email address or institutional affiliation is inferred here. Third-party software and observation data retain their original attribution and licence terms.
+The sole software author and copyright holder is **junjiezhang**. No email address or institutional affiliation is inferred here. Third-party software and observation data retain their original attribution and licence terms.
 
 ## Quick start
 
