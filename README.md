@@ -6,7 +6,7 @@ Version 0.2.0 is the initial public software release. The project owner will per
 
 ## Author and credits
 
-The sole software author and copyright holder is **junjiezhang**. OpenAI Codex assisted with design, implementation, testing and documentation; AI tools are not authors. No email address or institutional affiliation is inferred here. Third-party software and observation data retain their original attribution and licence terms.
+The sole software author and copyright holder is **junjiezhang**. AI use and author responsibility are documented in [AI_USE_DISCLOSURE.md](AI_USE_DISCLOSURE.md). AI tools are not authors. No email address or institutional affiliation is inferred here. Third-party software and observation data retain their original attribution and licence terms.
 
 ## Quick start
 
@@ -78,7 +78,7 @@ Proposed future usability work could test adapter construction and interpretatio
 
 The [proposed maintenance policy](docs/maintenance.md) states schema compatibility, required regression checks and safe bug reporting. Changes are recorded in [CHANGELOG.md](CHANGELOG.md). No support service or established external adopter group is claimed.
 
-`.github/workflows/tests.yml` defines Python 3.12 source tests, clean wheel installation and synthetic CSV/JSON CLI execution. The configuration is present; it has **not been run remotely** during release preparation.
+`.github/workflows/tests.yml` defines Python 3.12 source tests, clean wheel installation and synthetic CSV/JSON CLI execution. The [published release's Linux workflow](https://github.com/williamjay1/verifyrank/actions/runs/37425443624) completed successfully. Docker execution remains untested.
 
 The Dockerfile installs the included wheel with `--no-index --no-deps`. Its build context allows only the Dockerfile, wheel and synthetic inputs. Building may still require obtaining the Python base image. The mutable `python:3.12-slim` base tag does not provide a bitwise-reproducible image guarantee. Example commands, to run where Docker is available:
 

@@ -1,6 +1,6 @@
 # Importing the software release into Zenodo
 
-The human creator is **junjiezhang**, exactly as supplied by the project owner. GitHub hosting under `williamjay1` is an account identifier, not an additional scientific contributor. No affiliation, email address or ORCID has been invented. AI assistance is disclosed in the README and metadata; AI is not listed as a creator.
+The human creator is **junjiezhang**, exactly as supplied by the project owner. GitHub hosting under `williamjay1` is an account identifier, not an additional scientific contributor. No affiliation, email address or ORCID has been invented. [AI_USE_DISCLOSURE.md](AI_USE_DISCLOSURE.md) records actual AI assistance and author responsibility; the README and metadata provide the corresponding disclosure. AI is not listed as a creator.
 
 This repository contains MIT project code, documentation and synthetic examples. The observation-derived case lives separately at https://github.com/williamjay1/verifyrank-methane-case with source-specific data conditions. Archiving this software repository does not license those case data under MIT.
 
