@@ -1,0 +1,12 @@
+{
+  "cff-version": "1.2.0",
+  "message": "Please cite this version of VerifyRank. The manuscript has not been assigned a DOI.",
+  "type": "software",
+  "title": "VerifyRank: verification-aware evaluation of ranked environmental monitoring",
+  "authors": [{"family-names": "junjiezhang"}],
+  "version": "0.2.0",
+  "date-released": "2026-10-06",
+  "repository-code": "https://github.com/williamjay1/verifyrank",
+  "license": "MIT",
+  "keywords": ["environmental model evaluation", "incomplete outcomes", "verification planning"]
+}

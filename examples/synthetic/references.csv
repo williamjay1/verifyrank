@@ -1,0 +1,7 @@
+reference_id,state,value,resolvable,cost,recovery_probability
+known_positive,positive,1,false,1,
+known_negative,negative,0,false,1,
+shared_ambiguous,ambiguous,,true,2,0.5
+no_followup_day_1,no_followup,,false,1,
+no_followup_day_2,no_followup,,false,1,
+no_followup_day_3,no_followup,,false,1,

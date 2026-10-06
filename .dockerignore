@@ -1,0 +1,10 @@
+# Explicit allowlist: never send local observations, logs or environments.
+**
+!Dockerfile
+!dist/
+!dist/verifyrank-0.2.0-py3-none-any.whl
+!examples/
+!examples/synthetic/
+!examples/synthetic/decisions.csv
+!examples/synthetic/references.csv
+!examples/synthetic/input.json

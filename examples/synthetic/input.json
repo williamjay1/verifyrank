@@ -1,0 +1,222 @@
+{
+  "decisions": [
+    {
+      "decision_id": "day_1",
+      "policy": "policy_a",
+      "reference_id": "known_positive",
+      "weight": 1.0,
+      "budget": 2.0
+    },
+    {
+      "decision_id": "day_1",
+      "policy": "policy_a",
+      "reference_id": "known_negative",
+      "weight": 0.0,
+      "budget": 2.0
+    },
+    {
+      "decision_id": "day_1",
+      "policy": "policy_a",
+      "reference_id": "shared_ambiguous",
+      "weight": 0.5,
+      "budget": 2.0
+    },
+    {
+      "decision_id": "day_1",
+      "policy": "policy_a",
+      "reference_id": "no_followup_day_1",
+      "weight": 0.5,
+      "budget": 2.0
+    },
+    {
+      "decision_id": "day_1",
+      "policy": "policy_b",
+      "reference_id": "known_positive",
+      "weight": 0.0,
+      "budget": 2.0
+    },
+    {
+      "decision_id": "day_1",
+      "policy": "policy_b",
+      "reference_id": "known_negative",
+      "weight": 1.0,
+      "budget": 2.0
+    },
+    {
+      "decision_id": "day_1",
+      "policy": "policy_b",
+      "reference_id": "shared_ambiguous",
+      "weight": 0.75,
+      "budget": 2.0
+    },
+    {
+      "decision_id": "day_1",
+      "policy": "policy_b",
+      "reference_id": "no_followup_day_1",
+      "weight": 0.25,
+      "budget": 2.0
+    },
+    {
+      "decision_id": "day_2",
+      "policy": "policy_a",
+      "reference_id": "known_positive",
+      "weight": 0.0,
+      "budget": 2.0
+    },
+    {
+      "decision_id": "day_2",
+      "policy": "policy_a",
+      "reference_id": "known_negative",
+      "weight": 1.0,
+      "budget": 2.0
+    },
+    {
+      "decision_id": "day_2",
+      "policy": "policy_a",
+      "reference_id": "shared_ambiguous",
+      "weight": 0.75,
+      "budget": 2.0
+    },
+    {
+      "decision_id": "day_2",
+      "policy": "policy_a",
+      "reference_id": "no_followup_day_2",
+      "weight": 0.25,
+      "budget": 2.0
+    },
+    {
+      "decision_id": "day_2",
+      "policy": "policy_b",
+      "reference_id": "known_positive",
+      "weight": 1.0,
+      "budget": 2.0
+    },
+    {
+      "decision_id": "day_2",
+      "policy": "policy_b",
+      "reference_id": "known_negative",
+      "weight": 0.0,
+      "budget": 2.0
+    },
+    {
+      "decision_id": "day_2",
+      "policy": "policy_b",
+      "reference_id": "shared_ambiguous",
+      "weight": 0.5,
+      "budget": 2.0
+    },
+    {
+      "decision_id": "day_2",
+      "policy": "policy_b",
+      "reference_id": "no_followup_day_2",
+      "weight": 0.5,
+      "budget": 2.0
+    },
+    {
+      "decision_id": "day_3",
+      "policy": "policy_a",
+      "reference_id": "known_positive",
+      "weight": 0.75,
+      "budget": 2.0
+    },
+    {
+      "decision_id": "day_3",
+      "policy": "policy_a",
+      "reference_id": "known_negative",
+      "weight": 0.25,
+      "budget": 2.0
+    },
+    {
+      "decision_id": "day_3",
+      "policy": "policy_a",
+      "reference_id": "shared_ambiguous",
+      "weight": 0.75,
+      "budget": 2.0
+    },
+    {
+      "decision_id": "day_3",
+      "policy": "policy_a",
+      "reference_id": "no_followup_day_3",
+      "weight": 0.25,
+      "budget": 2.0
+    },
+    {
+      "decision_id": "day_3",
+      "policy": "policy_b",
+      "reference_id": "known_positive",
+      "weight": 0.25,
+      "budget": 2.0
+    },
+    {
+      "decision_id": "day_3",
+      "policy": "policy_b",
+      "reference_id": "known_negative",
+      "weight": 0.75,
+      "budget": 2.0
+    },
+    {
+      "decision_id": "day_3",
+      "policy": "policy_b",
+      "reference_id": "shared_ambiguous",
+      "weight": 0.25,
+      "budget": 2.0
+    },
+    {
+      "decision_id": "day_3",
+      "policy": "policy_b",
+      "reference_id": "no_followup_day_3",
+      "weight": 0.75,
+      "budget": 2.0
+    }
+  ],
+  "references": [
+    {
+      "reference_id": "known_positive",
+      "state": "positive",
+      "value": 1.0,
+      "resolvable": false,
+      "cost": 1.0,
+      "recovery_probability": null
+    },
+    {
+      "reference_id": "known_negative",
+      "state": "negative",
+      "value": 0.0,
+      "resolvable": false,
+      "cost": 1.0,
+      "recovery_probability": null
+    },
+    {
+      "reference_id": "shared_ambiguous",
+      "state": "ambiguous",
+      "value": null,
+      "resolvable": true,
+      "cost": 2.0,
+      "recovery_probability": 0.5
+    },
+    {
+      "reference_id": "no_followup_day_1",
+      "state": "no_followup",
+      "value": null,
+      "resolvable": false,
+      "cost": 1.0,
+      "recovery_probability": null
+    },
+    {
+      "reference_id": "no_followup_day_2",
+      "state": "no_followup",
+      "value": null,
+      "resolvable": false,
+      "cost": 1.0,
+      "recovery_probability": null
+    },
+    {
+      "reference_id": "no_followup_day_3",
+      "state": "no_followup",
+      "value": null,
+      "resolvable": false,
+      "cost": 1.0,
+      "recovery_probability": null
+    }
+  ]
+}

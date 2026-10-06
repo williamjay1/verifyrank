@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "VerifyRank 0.2.0 JSON input",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["decisions", "references"],
+  "properties": {
+    "decisions": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["decision_id", "policy", "reference_id", "weight", "budget"],
+        "properties": {
+          "decision_id": {"type": "string", "minLength": 1},
+          "policy": {"type": "string", "minLength": 1},
+          "reference_id": {"type": "string", "minLength": 1},
+          "weight": {"type": "number", "minimum": 0, "maximum": 1},
+          "budget": {"type": "number", "exclusiveMinimum": 0}
+        }
+      }
+    },
+    "references": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["reference_id", "state", "value", "resolvable", "cost"],
+        "properties": {
+          "reference_id": {"type": "string", "minLength": 1},
+          "state": {"enum": ["positive", "negative", "ambiguous", "no_followup"]},
+          "value": {"type": ["number", "null"], "enum": [0, 1, null]},
+          "resolvable": {"type": "boolean"},
+          "cost": {"type": "number", "exclusiveMinimum": 0},
+          "recovery_probability": {"type": ["number", "null"], "minimum": 0, "maximum": 1}
+        },
+        "allOf": [
+          {"if": {"properties": {"state": {"const": "positive"}}}, "then": {"properties": {"value": {"const": 1}}}},
+          {"if": {"properties": {"state": {"const": "negative"}}}, "then": {"properties": {"value": {"const": 0}}}},
+          {"if": {"properties": {"state": {"enum": ["ambiguous", "no_followup"]}}}, "then": {"properties": {"value": {"type": "null"}}}},
+          {"if": {"properties": {"state": {"const": "no_followup"}}}, "then": {"properties": {"resolvable": {"const": false}}}}
+        ]
+      }
+    }
+  },
+  "$comment": "Cross-row uniqueness, shared inventories, budgets, immutable no-follow-up identity and finite numbers are also enforced by verifyrank.validate. JSON cannot natively encode infinity."
+}

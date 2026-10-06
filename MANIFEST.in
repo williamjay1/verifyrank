@@ -1,0 +1,16 @@
+include LICENSE README.md
+include CHANGELOG.md Dockerfile .dockerignore .gitignore
+include .github/workflows/tests.yml
+include dist/verifyrank-0.2.0-py3-none-any.whl
+recursive-include docs *.md *.json
+recursive-include examples/synthetic *.csv *.json
+recursive-include tests *.py
+include scripts/check_methane_parity.py
+include scripts/validate_release.py
+exclude software_results.md
+recursive-exclude validation *
+recursive-exclude .venv *
+recursive-exclude .ci-venv *
+recursive-exclude temp *
+recursive-exclude demo_output *
+global-exclude __pycache__ *.pyc

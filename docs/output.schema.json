@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "VerifyRank 0.2.0 report envelope",
+  "type": "object", "additionalProperties": false,
+  "required": ["software", "version", "status", "metadata", "daily_policy", "macro_policy", "daily_comparison", "macro_comparison", "priority", "plans"],
+  "properties": {
+    "software": {"const": "verifyrank"},
+    "version": {"const": "0.2.0"},
+    "status": {"const": "prepared_public_release"},
+    "metadata": {"type": "object", "required": ["decision_count", "policy_count", "weight_rows", "reference_count", "interval_kind"]},
+    "daily_policy": {"type": "array", "items": {"type": "object", "required": ["decision_id", "policy", "budget", "conditional_score", "verified_selected_mass", "completion_lower", "completion_upper"]}},
+    "macro_policy": {"type": "array", "items": {"type": "object", "required": ["policy", "decision_count", "conditional_defined_dates", "conditional_score", "completion_lower", "completion_upper"]}},
+    "daily_comparison": {"type": "array", "items": {"type": "object", "required": ["decision_id", "policy_a", "policy_b", "conditional_difference", "lower", "upper", "width"]}},
+    "macro_comparison": {"type": "array", "items": {"type": "object", "required": ["policy_a", "policy_b", "decision_count", "conditional_defined_dates", "conditional_difference", "lower", "upper", "width", "irreducible_no_followup_width", "interval_classification"]}},
+    "priority": {"type": "array", "items": {"type": "object", "required": ["policy_a", "policy_b", "reference_id", "coefficient", "potential_width_reduction", "eligible", "blocked_reason"]}},
+    "plans": {"type": "array", "items": {"type": "object", "required": ["policy_a", "policy_b", "strategy", "cost_budget", "selected", "cost_used", "initial_width", "irreducible_width"]}}
+  },
+  "$comment": "An envelope schema, not a replacement for documented field semantics. All interval fields are binary completion ranges, not confidence intervals. Undefined numeric quantities are null."
+}
